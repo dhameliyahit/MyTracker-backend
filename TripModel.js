@@ -21,6 +21,11 @@ const TripSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    mobileNumber:{
+        type:String,
+        required:true,
+        unique:true,
+    },
     expenses: [ExpenseSchema],
  }, { timestamps: true });
 
