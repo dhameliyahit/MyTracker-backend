@@ -16,18 +16,16 @@ const ExpenseSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 
-const TripSchema = new mongoose.Schema({  
+const TripSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
     },
-    mobileNumber:{
-        type:String,
-        required:true,
-        unique:true,
+    mobileNumber: {
+        type: String,
     },
     expenses: [ExpenseSchema],
- }, { timestamps: true });
+}, { timestamps: true });
 
 const Trip = mongoose.model('Trip', TripSchema);
 
